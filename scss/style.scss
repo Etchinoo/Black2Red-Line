@@ -1,0 +1,17 @@
+body {
+    margin: 0 auto;
+    width: 10%;
+}
+.containerX {
+    width: 100%;
+}
+.divX {
+    height: 20px;
+    max-width: 80px;
+}
+@for $color from 0 to 256 {
+    $colorX : rgb($color, 0, 0);
+    .divX:nth-child(#{$color}) {
+        background-color: $colorX;
+    }
+}
