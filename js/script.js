@@ -1,14 +1,12 @@
 let containerx = document.getElementById('containerX');
-// let divX = document.querySelector(".divX");
 
-for (let index = 0; index < 256;++index) {
-    let divX = document.createElement('div');
-        divX.classList = 'divX';
-        containerx.appendChild(divX);
-        var colorX = "(" + index + ", 0, 0)";    
+window.onload =function loop(){
+for (let i = 0; i < 256;++i) {
+    containerx.innerHTML += "<div class='divX' onclick ='RGB("+i+")'></div>";
+    var divX = document.getElementsByClassName('divX')[i];
+    divX.style.backgroundColor  += "rgb("+i+",0,0)";
+    }
 }
-let divX = document.querySelector(".divX");
-
-document.querySelector(".divX").addEventListener('click', function displayColor() {
-    alert(colorX);
- } );
+function RGB(i){
+    alert("Rgb"+" "+i+",0,0");
+    }
